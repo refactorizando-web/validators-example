@@ -1,0 +1,31 @@
+= Validation with Spring Boot =
+
+This is a simple a sample about the use of validators in Spring Boot.
+For example:
+
+        @NotNull
+        @Max
+        @NotBlank
+        ....
+
+If you want more information don't hesitate to take a look at
+https://refactorizando.com/validadores-spring-boot
+
+== How does it work?
+
+In this example we are going to use the library:
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-validation</artifactId>
+    </dependency>
+
+This library must be added into the pom.xml of your project to use the Spring Boot
+validation.
+
+== How does it run?
+
+This is a simple Spring Boot project so to use it just run the application:
+
+  mvn spring-boot:run
+
