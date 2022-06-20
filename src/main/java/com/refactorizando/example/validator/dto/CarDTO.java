@@ -3,6 +3,8 @@ package com.refactorizando.example.validator.dto;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+
+import com.refactorizando.example.validator.config.LengthValidation;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -23,4 +25,8 @@ public class CarDTO {
   @NotBlank(message = "plate is required")
   @Size(min = 5, max = 10)
   private String plate;
+
+  @LengthValidation
+  private String origin;
+
 }

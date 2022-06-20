@@ -1,12 +1,19 @@
 = Validation with Spring Boot =
 
-This is a simple a sample about the use of validators in Spring Boot.
-For example:
+This is a simple a sample about the use of validators in Spring Boot and how we can create a
+custom validator.
+
+For example with commons annotations:
 
         @NotNull
         @Max
         @NotBlank
         ....
+
+With a custom annotation:
+
+        @LengthValidator
+        String origin
 
 If you want more information don't hesitate to take a look at
 https://refactorizando.com/validadores-spring-boot

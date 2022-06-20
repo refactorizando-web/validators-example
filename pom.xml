@@ -15,7 +15,7 @@
 	<description>Validator demo</description>
 	<properties>
 		<java.version>17</java.version>
-    <mapstruct.version>1.5.1.Final</mapstruct.version>
+        <mapstruct.version>1.5.1.Final</mapstruct.version>
 	</properties>
 	<dependencies>
 		<dependency>

@@ -50,6 +50,20 @@ public class CarControllerIntegrationTest {
 
   }
 
+  @Test
+  void whenSaveCarIsInvoked_givenALengthGreaterThan10_thenErrorIsReturned() throws Exception {
+
+    CarDTO carDTO = createCarDTO();
+    carDTO.setPlate("ASDFGA");
+    carDTO.setOrigin("ASDFGPOIERTUYUWE");
+    mockMvc.perform(
+                    MockMvcRequestBuilders.post("/cars")
+                            .contentType(MediaType.APPLICATION_JSON)
+                            .content(asJsonString(carDTO)))
+            .andExpect(status().is4xxClientError());
+
+  }
+
   public static String asJsonString(final Object obj) {
     try {
       return new ObjectMapper().writeValueAsString(obj);
